@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+}
+h2 {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+}

@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": "auto",
+        "targets": {
+          "esmodules": true
+        },
+        "corejs": "3.x",
+        "useBuiltIns": "usage"
+      }
+    ],
+    ["@babel/react", {
+      "runtime": "automatic"
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "src": "./src",
+        "core": "./src/core/",
+        "config": "./config/",
+        "icons": "./src/images/icons/",
+        "images": "./src/images/",
+        "store": "./src/store/",
+        "App": "./src/features/App/",
+        "Common": "./src/features/Common/",
+        "FormComponents": "./src/features/FormComponents/",
+        "constants": "./src/constants/",
+        "helpers": "./src/helpers/",
+        "hooks": "./src/hooks",
+        "languages": "./src/languages"
+      }
+    }]
+  ]
+}

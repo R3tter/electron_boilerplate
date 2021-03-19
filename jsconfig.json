@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "baseUrl": "./src",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "paths": {
+      "src/*": ["/*"],
+      "core/*": ["core/*"],
+      "store/*": ["store/*"],
+      "App": ["features/App"],
+      "App/*": ["features/App/*"],
+      "Common": ["features/Common"],
+      "Common/*": ["features/Common/*"],
+      "FormComponents": ["features/FormComponents"],
+      "constants": ["constants"],
+      "constants/*": ["constants/*"],
+      "images/*": ["images/*"],
+      "images/icons/*": ["images/icons/*"],
+      "helpers": ["helpers"],
+      "helpers/*": ["helpers/*"],
+      "hooks": ["hooks"],
+      "languages/*": ["languages/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
