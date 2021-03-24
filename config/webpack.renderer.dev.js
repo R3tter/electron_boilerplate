@@ -1,22 +1,22 @@
 const path = require('path');
 const webpack = require('webpack');
-const api = require('./api');
 
-const { src, build, icons } = require('./paths').main;
+const { renderer, build, icons } = require('./paths').main;
 const { version } = require('../package.json');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = env => ({
+module.exports = () => ({
   entry: {
-    src
+    src: renderer
   },
   output: {
     publicPath: '/',
     path: build,
-    filename: 'bundle.[hash:6].js'
+    filename: 'renderer.[hash:6].js'
   },
+  target: 'electron-renderer',
   devtool: 'cheap-module-source-map',
   module: {
     rules: [
@@ -24,10 +24,6 @@ module.exports = env => ({
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       },
       {
         test: /\.(png|svg|jpg)$/,
@@ -70,13 +66,13 @@ module.exports = env => ({
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', 'jpg']
+    extensions: ['.js', '.jsx', '.json', 'jpg']
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'App title',
       // favicon: path.join(src, 'favicon.ico'),
-      template: path.join(src, 'index.ejs'),
+      template: path.join(renderer, 'index.ejs'),
       inject: 'body',
       hash: true,
       version
@@ -84,9 +80,7 @@ module.exports = env => ({
     new webpack.DefinePlugin({
       DEV: JSON.stringify(true),
       PROD: JSON.stringify(false),
-      VERSION: JSON.stringify(version),
-      URL: JSON.stringify(api[env.api].rest),
-      SOCKET_URL: JSON.stringify(api[env.api].socket)
+      VERSION: JSON.stringify(version)
     }),
     new ESLintPlugin({
       extensions: ['js', 'jsx']

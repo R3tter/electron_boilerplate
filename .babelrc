@@ -1,20 +1,4 @@
 {
-  "presets": [
-    [
-      "@babel/env",
-      {
-        "modules": "auto",
-        "targets": {
-          "esmodules": true
-        },
-        "corejs": "3.x",
-        "useBuiltIns": "usage"
-      }
-    ],
-    ["@babel/react", {
-      "runtime": "automatic"
-    }]
-  ],
   "plugins": [
     ["module-resolver", {
       "alias": {
@@ -33,6 +17,22 @@
         "hooks": "./src/renderer/hooks",
         "languages": "./src/renderer/languages"
       }
+    }]
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": "auto",
+        "targets": {
+          "esmodules": true
+        },
+        "corejs": "3.x",
+        "useBuiltIns": "usage"
+      }
+    ],
+    ["@babel/react", {
+      "runtime": "automatic"
     }]
   ]
 }

@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll=false",
-    "dev": "webpack-dev-server --mode development --env.api=local --config ./config/webpack.dev.js",
-    "prod": "rm -rf ./dist/* && webpack --mode production --env.api=dev --display-error-details --config ./config/webpack.prod.js"
+    "dev:renderer": "webpack-dev-server --mode development --env.api=local --config ./config/webpack.renderer.dev.js",
+    "dev:main": "webpack --mode development --env.api=local --config ./config/webpack.main.dev.js",
+    "dev": "npm run dev:renderer & npm run dev:main",
+    "electron:dev": "electron dev/main.js",
+    "electron:prod": "electron dist/main.js",
+    "prod": "rm -rf ./dist/* && webpack --mode production --env.api=prod --display-error-details --config ./config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -49,7 +53,6 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "css-loader": "^5.0.1",
-    "electron": "^12.0.2",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -79,6 +82,8 @@
     "aphrodite": "^2.4.0",
     "api-req-redux": "2.0.10",
     "core-js": "^3.8.3",
+    "electron": "^12.0.2",
+    "electron-reload": "^1.5.0",
     "i18next": "^19.8.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
