@@ -8,6 +8,7 @@ module.exports = () => ({
   entry: {
     src: main
   },
+  mode: 'development',
   watch: true,
   output: {
     publicPath: '/',

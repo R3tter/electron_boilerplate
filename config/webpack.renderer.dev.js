@@ -16,6 +16,7 @@ module.exports = () => ({
     path: build,
     filename: 'renderer.[hash:6].js'
   },
+  mode: 'development',
   target: 'electron-renderer',
   devtool: 'cheap-module-source-map',
   module: {

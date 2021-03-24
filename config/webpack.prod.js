@@ -16,6 +16,7 @@ module.exports = [
     entry: {
       src: renderer
     },
+    mode: 'production',
     output: {
       publicPath: '/',
       path: dist,
@@ -111,7 +112,6 @@ module.exports = [
     entry: {
       src: main
     },
-    watch: true,
     output: {
       publicPath: '/',
       path: dist,
@@ -119,6 +119,7 @@ module.exports = [
     },
     target: 'electron-main',
     devtool: 'source-map',
+    mode: 'production',
     module: {
       rules: [
         {

@@ -1,16 +1,13 @@
 {
-  "name": "webpack_boilerplate",
+  "name": "electron_boilerplate",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll=false",
-    "dev:renderer": "webpack-dev-server --mode development --env.api=local --config ./config/webpack.renderer.dev.js",
-    "dev:main": "webpack --mode development --env.api=local --config ./config/webpack.main.dev.js",
-    "dev": "npm run dev:renderer & npm run dev:main",
-    "electron:dev": "electron dev/main.js",
-    "electron:prod": "electron dist/main.js",
-    "prod": "rm -rf ./dist/* && webpack --mode production --env.api=prod --display-error-details --config ./config/webpack.prod.js"
+    "webpack:dev": "webpack-dev-server  --config ./config/webpack.renderer.dev.js & webpack --config ./config/webpack.main.dev.js",
+    "webpack:prod": "rm -rf ./dist/* && webpack --display-error-details --config ./config/webpack.prod.js",
+    "dev": "electron dev/main.js"
   },
   "repository": {
     "type": "git",
@@ -83,7 +80,6 @@
     "api-req-redux": "2.0.10",
     "core-js": "^3.8.3",
     "electron": "^12.0.2",
-    "electron-reload": "^1.5.0",
     "i18next": "^19.8.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

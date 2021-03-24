@@ -1,30 +1,17 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
+import { localhost, html, mainWindowConf } from 'main/constants';
 
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
-    }
-  });
+const createWindow = () => {
+  const win = new BrowserWindow(mainWindowConf);
 
-  DEV ? win.loadURL('http://localhost:8080') : win.loadFile('index.html');
-}
+  DEV ? win.loadURL(localhost) : win.loadFile(html);
+};
 
 app.whenReady().then(() => {
   createWindow();
-
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
+  app.on('activate', () => !BrowserWindow.getAllWindows().length && createWindow());
 });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
+app.on('window-all-closed', () => app.quit());
+
+ipcMain.on('addNotification', e => e.reply('showNotification'));

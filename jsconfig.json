@@ -6,6 +6,10 @@
     "moduleResolution": "node",
     "paths": {
       "src/*": ["/*"],
+      "renderer/": ["renderer"],
+      "renderer/*": ["renderer/*"],
+      "main/": ["main"],
+      "main/*": ["main/*"],
       "core/*": ["core/*"],
       "store/*": ["renderer/store/*"],
       "App": ["renderer/features/App"],
@@ -13,12 +17,8 @@
       "Common": ["renderer/features/Common"],
       "Common/*": ["renderer/features/Common/*"],
       "FormComponents": ["renderer/features/FormComponents"],
-      "constants": ["renderer/constants"],
-      "constants/*": ["renderer/constants/*"],
       "images/*": ["renderer/images/*"],
       "images/icons/*": ["renderer/images/icons/*"],
-      "helpers": ["renderer/helpers"],
-      "helpers/*": ["renderer/helpers/*"],
       "hooks": ["renderer/hooks"],
       "languages/*": ["renderer/languages/*"]
     }

@@ -3,7 +3,8 @@
     ["module-resolver", {
       "alias": {
         "src": "./src",
-        "renderer": ",./src/renderer",
+        "renderer": "./src/renderer",
+        "main": "./src/main",
         "core": "./src/core/",
         "config": "./config/",
         "icons": "./src/renderer/images/icons/",
@@ -12,8 +13,6 @@
         "App": "./src/renderer/features/App/",
         "Common": "./src/renderer/features/Common/",
         "FormComponents": "./src/renderer/features/FormComponents/",
-        "constants": "./src/renderer/constants/",
-        "helpers": "./src/renderer/helpers/",
         "hooks": "./src/renderer/hooks",
         "languages": "./src/renderer/languages"
       }
