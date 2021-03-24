@@ -3,7 +3,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 
 import { Cached } from 'App/reducers/cached';
-import { LOCAL_STORAGE_NAME } from 'constants/index.js';
+import { LOCAL_STORAGE_NAME } from 'constants';
 
 import { loadState, saveState, clearState } from './localStorage';
 

@@ -64,7 +64,7 @@ module.exports = env => ({
       },
       {
         test: /\.svg$/,
-        include: [icons],
+        include: icons,
         use: ['@svgr/webpack']
       }
     ]

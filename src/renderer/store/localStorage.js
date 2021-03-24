@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_NAME } from 'constants/index.js';
+import { LOCAL_STORAGE_NAME } from 'constants';
 
 export const loadState = key => {
   try {

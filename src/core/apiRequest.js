@@ -1,4 +1,4 @@
-import store from 'store';
+import store from 'src/renderer/store';
 import { apiRequestRedux } from 'api-req-redux';
 
 const getHeaders = state => [

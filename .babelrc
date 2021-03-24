@@ -19,18 +19,19 @@
     ["module-resolver", {
       "alias": {
         "src": "./src",
+        "renderer": ",./src/renderer",
         "core": "./src/core/",
         "config": "./config/",
-        "icons": "./src/images/icons/",
-        "images": "./src/images/",
-        "store": "./src/store/",
-        "App": "./src/features/App/",
-        "Common": "./src/features/Common/",
-        "FormComponents": "./src/features/FormComponents/",
-        "constants": "./src/constants/",
-        "helpers": "./src/helpers/",
-        "hooks": "./src/hooks",
-        "languages": "./src/languages"
+        "icons": "./src/renderer/images/icons/",
+        "images": "./src/renderer/images/",
+        "store": "./src/renderer/store/",
+        "App": "./src/renderer/features/App/",
+        "Common": "./src/renderer/features/Common/",
+        "FormComponents": "./src/renderer/features/FormComponents/",
+        "constants": "./src/renderer/constants/",
+        "helpers": "./src/renderer/helpers/",
+        "hooks": "./src/renderer/hooks",
+        "languages": "./src/renderer/languages"
       }
     }]
   ]
