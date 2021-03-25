@@ -7,7 +7,8 @@
     "test": "jest --watchAll=false",
     "webpack:dev": "webpack-dev-server  --config ./config/webpack.renderer.dev.js & webpack --config ./config/webpack.main.dev.js",
     "webpack:prod": "rm -rf ./dist/* && webpack --display-error-details --config ./config/webpack.prod.js",
-    "dev": "electron dev/main.js"
+    "dev": "electron dev/main.js",
+    "build:win": "rm -rf ./out/* && node ./packager/index.js --env.plat=win"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "css-loader": "^5.0.1",
+    "electron-packager": "^15.2.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",

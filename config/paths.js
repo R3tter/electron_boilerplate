@@ -5,7 +5,8 @@ const main = {
   main: path.resolve(__dirname, '../src/main/'),
   build: path.resolve(__dirname, '../dev/'),
   dist: path.resolve(__dirname, '../dist/'),
-  icons: path.resolve(__dirname, '../src/renderer/images/icons/')
+  icons: path.resolve(__dirname, '../src/renderer/images/icons/'),
+  out: path.resolve(__dirname, '../out/')
 };
 
 module.exports = {
