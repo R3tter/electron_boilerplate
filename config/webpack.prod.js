@@ -8,7 +8,7 @@ const { renderer, dist, icons, main } = require('./paths').main;
 const { version } = require('../package.json');
 
 const extractSass = new MiniCssExtractPlugin({
-  filename: '[name].[fullhash:6].css'
+  filename: 'src.css'
 });
 
 module.exports = [
@@ -20,7 +20,7 @@ module.exports = [
     output: {
       publicPath: '/',
       path: dist,
-      filename: 'renderer.[fullhash:6].js'
+      filename: 'renderer.js'
     },
     target: 'electron-renderer',
     optimization: {
@@ -45,7 +45,7 @@ module.exports = [
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'images/[name].[fullhash:6].[ext]'
+              name: 'images/[name].[hash:6].[ext]'
             }
           }
         },
@@ -63,7 +63,7 @@ module.exports = [
           use: {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[fullhash:6].[ext]'
+              name: 'fonts/[name].[hash:6].[ext]'
             }
           }
         },

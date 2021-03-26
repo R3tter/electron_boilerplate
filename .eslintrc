@@ -47,7 +47,8 @@
     "default-case": "off",
     "react/jsx-indent": "off",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "eslint-config-airbnb"]
 }
