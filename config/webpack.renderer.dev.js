@@ -14,7 +14,7 @@ module.exports = () => ({
   output: {
     publicPath: '/',
     path: build,
-    filename: 'renderer.[hash:6].js'
+    filename: 'renderer.[fullhash:6].js'
   },
   mode: 'development',
   target: 'electron-renderer',
@@ -33,7 +33,7 @@ module.exports = () => ({
           loader: 'url-loader',
           options: {
             limit: 20000,
-            name: 'images/[name].[hash:6].[ext]'
+            name: 'images/[name].[fullhash:6].[ext]'
           }
         }
       },
@@ -46,7 +46,7 @@ module.exports = () => ({
         use: {
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name].[hash:6].[ext]'
+            name: 'fonts/[name].[fullhash:6].[ext]'
           }
         }
       },
