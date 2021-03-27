@@ -8,14 +8,17 @@
     "webpack:dev": "webpack serve --config ./config/webpack.renderer.dev.js & webpack --config ./config/webpack.main.dev.js",
     "webpack:prod": "rm -rf ./dist/* && webpack --config ./config/webpack.prod.js",
     "dev": "electron dev/main.js",
-    "build": "electron-builder -m"
+    "build": "rm -rf out && electron-builder -mwl"
   },
   "build": {
     "appId": "your.id",
     "directories": {
-      "buildResources": "dist",
       "output": "out"
     },
+    "extends": null,
+    "files": [
+      "./dist/*"
+    ],
     "nsis": {
       "packElevateHelper": false
     },

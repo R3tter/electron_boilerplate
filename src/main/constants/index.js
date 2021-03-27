@@ -1,5 +1,5 @@
 export const localhost = 'http://localhost:8080';
-export const html = 'index.html';
+export const html = './dist/index.html';
 
 export const mainWindowConf = {
   width: 1280,

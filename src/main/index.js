@@ -3,7 +3,6 @@ import { localhost, html, mainWindowConf } from 'main/constants';
 
 const createWindow = () => {
   const win = new BrowserWindow(mainWindowConf);
-
   DEV ? win.loadURL(localhost) : win.loadFile(html);
 };
 
