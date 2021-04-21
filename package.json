@@ -141,6 +141,6 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "reset-css": "^5.0.1",
-    "use-form-validation-hook": "^1.0.19"
+    "use-form-validation-hook": "^1.0.20"
   }
 }
